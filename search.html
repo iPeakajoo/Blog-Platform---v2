@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./category.html">Category</a></li>
-        <li><a href="./search.html">Search</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./category.html">Category</a></li>
+          <li><a href="./search.html">Search</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <div>
-    <label for="search">find</label>
-    <input type="text" id="search" />
-    <button id="SearchBtn">search </button>
-  </div>
-  <div>
-    <ul id="match-list"></ul>
-  </div>
-  <div id="statistic"></div>
-  
-  <script src="./js/search.js"></script>
-  <script src="./js/statistics.js"></script>
+    <div id="statistic"></div>
 
-</body>
+    <div>
+      <label for="search">find</label>
+      <input type="text" id="search" />
+      <button id="SearchBtn">search</button>
+    </div>
+    <div>
+      <ul id="match-list"></ul>
+    </div>
+    <div id="statistic"></div>
+
+    <script src="./js/search.js"></script>
+    <script src="./js/statistics.js"></script>
+  </body>
 </html>

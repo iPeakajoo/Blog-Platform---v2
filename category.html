@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./category.html">Category</a></li>
+          <li><a href="./search.html">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="statistic"></div>
+
+    <label for="categories">Choose a catagory:</label>
+    <select name="categories" id="categories">
+      <option value="All">-All</option>
+      <option value="Gaming">--Gaming</option>
+      <option value="Game Development">--Game Development</option>
+      <option value="Education">--Education</option>
+      <option value="Health">--Health</option>
+    </select>
+
+    <div>
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./category.html">Category</a></li>
-        <li><a href="./search.html">Search</a></li>
+        <li id="categoryList"></li>
       </ul>
-    </nav>
-  </header>
+    </div>
 
-  <label for="categories">Choose a catagory:</label>
-  <select name="categories" id="categories">
-    <option value="All">-All</option>
-    <option value="Gaming">--Gaming</option>
-    <option value="Game Development">--Game Development</option>
-    <option value="Education">--Education</option>
-    <option value="Health">--Health</option>
-  </select> 
-
-  <div>
-    <ul><li id="categoryList"></li></ul>
-  </div>
-  <div id="statistic"></div>
-  
-  <script src="./js/category.js"></script>
-  <script src="./js/statistics.js"></script>
-
-</body>
+    <script src="./js/category.js"></script>
+    <script src="./js/statistics.js"></script>
+  </body>
 </html>
