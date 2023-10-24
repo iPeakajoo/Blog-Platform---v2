@@ -1,9 +1,15 @@
-const xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4 && xhr.status == 200) {
-    const data = JSON.parse(xhr.responseText);
-    console.log(data);
-  }
-};
-xhr.send();
+const statistic = document.getElementById('statistic');
+
+let sta = ''
+
+async function getstatistics() {
+const res = await fetch('./json/statistics.json');
+const json = await res.json();
+
+const data = json.statistics
+  
+    sta +=   `totalBlogs ${data.totalBlogs} | totalViews ${data.totalViews}`
+
+  statistic.innerHTML = sta
+}
+getstatistics()
