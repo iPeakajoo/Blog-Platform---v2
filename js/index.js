@@ -17,6 +17,7 @@ const json = await res.json();
               </br> ${item.author}
               </br> ${item.category}
               </br> ${item.content}
+              </br> <a href="article.html?id=${item.id}">Read more</a>
               </br> ${item.views}</li>`
   });
 
