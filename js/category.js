@@ -11,12 +11,16 @@ async function getblog2() {
 
     json.blogs.forEach(item => {
       
-      output2 +=   `<li id='${item.id}'>${item.title}
-                  </br> ${item.author}
-                  </br> ${item.category}
-                  </br> ${item.content}
-                  </br> <a href="article.html?id=${item.id}">Read more</a>
-                  </br> ${item.views}</li>`
+      output2 +=        `<div class="card col-lg-3 col-md-4 col-sm-1"  style="width: 18rem;">
+      <img src="${item.img}" class="card-img-top" alt="...">
+      <div class="card-body">
+      <h5 class="card-title">${item.title}</h5>
+      <p class="card-text">${item.content}</p>
+      <p class="card-text">view ${item.views}</p>
+      <a href="article.html?id=${item.id}" class="btn btn-primary">Read more</a>
+      </div>
+      </div>
+  `
     
               });
               categoryList.innerHTML = output2
@@ -38,19 +42,27 @@ categories.addEventListener('change', () => {
 
     json.blogs.forEach(item => {
       if (item.category == catageries_fillter) {
-        output2 += `<li id='${item.id}'>${item.title}
-                </br> ${item.author}
-                </br> ${item.category}
-                </br> ${item.content}
-                </br> <a href="article.html?id=${item.id}">Read more</a>
-                </br> ${item.views}</li>`
+        output2 += `<div class="card col-lg-3 col-md-4 col-sm-1"  style="width: 18rem;">
+        <img src="${item.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <p class="card-text">${item.content}</p>
+        <p class="card-text">view ${item.views}</p>
+        <a href="article.html?id=${item.id}" class="btn btn-primary">Read more</a>
+        </div>
+        </div>
+    `
       }else if(catageries_fillter=="All"){
-        output2 +=   `<li id='${item.id}'>${item.title}
-                </br> ${item.author}
-                </br> ${item.category}
-                </br> ${item.content}
-                </br> <a href="article.html?id=${item.id}">Read more</a>
-                </br> ${item.views}</li>`
+        output2 +=   `<div class="card col-lg-3 col-md-4 col-sm-1"  style="width: 18rem;">
+        <img src="${item.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">${item.title}</h5>
+        <p class="card-text">${item.content}</p>
+        <p class="card-text">view ${item.views}</p>
+        <a href="article.html?id=${item.id}" class="btn btn-primary">Read more</a>
+        </div>
+        </div>
+    `
       }
     });
     categoryList.innerHTML = output2
